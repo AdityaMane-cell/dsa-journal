@@ -1,7 +1,7 @@
 /*
  * Problem: Two Sum
  * Difficulty: Easy
- * Topic: Hashmaps
+ * Topic: Hashmap
  * Pattern: Complement-lookup
  *
  * Approach:
