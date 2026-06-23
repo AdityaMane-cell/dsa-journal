@@ -1,31 +1,31 @@
-package hashmap;
+package set;
 
 /*
- * Problem: Contains Duplicate
+ * Problem: ContainsDuplicate
  * Difficulty: Easy
- * Topic: Hashmaps
- * Pattern: 
+ * Topic: easy
  *
  * Approach:
- * Use a hashmap to store value->index as we iterate.
+ * Use a hashset to store unique values as we iterate.
  * For each number, check if it already exists return true.
  *
- * Time: O(n)
+ * Time:  O(n)
  * Space: O(n)
+ * 
  */
 
-import java.util.Map;
-import java.util.HashMap;
+import java.util.Set;
+import java.util.HashSet;
 
 public class ContainsDuplicate {
     public boolean containsDuplicate(int[] nums) {
-        Map<Integer, Integer> map = new HashMap<>();
+        Set<Integer> set = new HashSet<>();
 
         for (int num : nums) {
-            if (map.containsKey(num)) {
+            if (set.contains(num)) {
                 return true;
             }
-            map.put(num, 1);
+            set.add(num);
         }
         return false;
     }

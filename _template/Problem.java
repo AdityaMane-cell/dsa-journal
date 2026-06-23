@@ -11,7 +11,6 @@
  * Time:  O(n)
  * Space: O(n)
  * 
- * Notes: 
  */
 
 import java.util.HashMap;
