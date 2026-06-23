@@ -1,8 +1,8 @@
 /*
  * Problem: Two Sum
- * Link: https://leetcode.com/problems/two-sum/
  * Difficulty: Easy
  * Topic: Hashmaps
+ * Pattern: Complement-lookup
  *
  * Approach:
  * Use a hashmap to store value->index as we iterate.
@@ -10,6 +10,8 @@
  *
  * Time:  O(n)
  * Space: O(n)
+ * 
+ * Notes: 
  */
 
 import java.util.HashMap;
@@ -20,10 +22,10 @@ class TwoSum {
         for (int i = 0; i < nums.length; i++) {
             int complement = target - nums[i];
             if (map.containsKey(complement)) {
-                return new int[]{map.get(complement), i};
+                return new int[] { map.get(complement), i };
             }
             map.put(nums[i], i);
         }
-        return new int[]{};
+        return new int[] {};
     }
 }
