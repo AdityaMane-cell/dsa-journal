@@ -2,7 +2,7 @@
  * Problem: Best Time To Buy And Sell Stocks II
  * Difficulty: Medium
  * Topic: Arrays
- * Pattern: Greedy-Approach
+ * Pattern: Single Transaction Pattern
  *
  * Approach:
  * iteration over elements looking for price less than the price at which we bought the stocks.
