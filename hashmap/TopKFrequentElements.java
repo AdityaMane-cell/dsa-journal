@@ -17,20 +17,23 @@ package hashmap;
  * 
  */
 
-import java.util.Arrays;
+import java.util.Map.Entry;
+import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.List;
 
 class TopKFrequentElements {
-        public int[] topKFrequent(int[] nums, int k) {
+    public int[] topKFrequent(int[] nums, int k) {
         int[] result = new int[k];
         HashMap<Integer, Integer> map = new HashMap<>();
 
-        for(int num : nums) {
+        for (int num : nums) {
             map.put(num, map.getOrDefault(num, 0) + 1);
         }
-        
-        List<Map.Entry<Integer, Integer>> entry = new ArrayList<>(map.entrySet());
-        entry.sort((a,b) -> b.getValue() - a.getValue());
-        for(int i = 0; i < k; i++) {
+
+        List<Entry<Integer, Integer>> entry = new ArrayList<>(map.entrySet());
+        entry.sort((a, b) -> b.getValue() - a.getValue());
+        for (int i = 0; i < k; i++) {
             result[i] = entry.get(i).getKey();
         }
         return result;
