@@ -40,14 +40,14 @@ A repository documenting my Data Structures and Algorithms practice in Java.
 
 | Total | Easy | Medium | Hard |
 | ----- | ---- | ------ | ---- |
-| 0     | 0    | 0      | 0    |
+| 0     | 0    | 1      | 0    |
 
 ### Platforms
 
 | Platform      | Solved |
 | ------------- | ------ |
 | LeetCode      | 0      |
-| GeeksForGeeks | 0      |
+| GeeksForGeeks | 1      |
 | Codeforces    | 0      |
 
 ---
