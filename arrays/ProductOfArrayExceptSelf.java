@@ -1,5 +1,3 @@
-package arrays;
-
 /*
  * Problem: Contains Duplicate
  * Difficulty: Easy
