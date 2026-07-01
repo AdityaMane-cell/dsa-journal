@@ -1,5 +1,5 @@
 /*
- * Problem: Contains Duplicate
+ * Problem: Product of Array Except self
  * Difficulty: Easy
  * Topic: Hashmaps
  * Pattern: prefix/suffix product
@@ -9,6 +9,10 @@
  * similarly calculate right auxiliary array where every right[i] is suffix product including right[i]
  * Then simply elements from left or right or both as depending on index.
  * 
+ * Optimized:
+ * calculate only right auxiliary array while iterating (and keep right[0] == right[1])
+ * then using loop calculate the result in right auxiliary array itself while simaltaneously
+ * calculating left product in nums array as we iterate.
  * 
  * Time: O(n)
  * Space: O(n)
@@ -19,18 +23,18 @@ public class ProductOfArrayExceptSelf {
     public int[] productExceptSelfOptimized(int[] nums) {
         int n = nums.length;
         int[] right = new int[n];
-        right[n-1] = nums[n-1];
-        for(int i=n-2; i>=0; i--) {
-            right[i] = nums[i] * right[i+1];
+        right[n - 1] = nums[n - 1];
+        for (int i = n - 2; i >= 0; i--) {
+            right[i] = nums[i] * right[i + 1];
         }
         right[0] = right[1];
-        for(int i=1; i<n; i++) {
-            if(i == n-1) {
-                right[i] = nums[i-1];
+        for (int i = 1; i < n; i++) {
+            if (i == n - 1) {
+                right[i] = nums[i - 1];
             } else {
-                right[i] = nums[i-1] * right[i+1];
+                right[i] = nums[i - 1] * right[i + 1];
             }
-            nums[i] *= nums[i-1];
+            nums[i] *= nums[i - 1];
         }
         return right;
     }
